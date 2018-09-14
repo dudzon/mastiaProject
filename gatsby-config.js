@@ -1,6 +1,26 @@
+const postCssFocus = require('postcss-focus');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Mastia Template  - simple bussiness website',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [ postCssFocus(),
+                          autoprefixer()],
+        precision: 8,
+      },
+    },
+  ]
 }
