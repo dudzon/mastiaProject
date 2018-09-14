@@ -1,0 +1,23 @@
+@import './../../../utils/variables';
+
+.wrapperContact{
+    display:flex;
+    align-items:center;
+    height:100%;
+    width:29.45rem;
+    &__container{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        width:30%;
+        span{
+            font-family:'Open Sans',sans-serif;
+            font-size:.775rem;
+            padding-left:10px;
+        }
+        &:first-child,
+        &:last-child{
+            flex-grow:2;
+        }
+    }
+}

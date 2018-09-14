@@ -1,0 +1,15 @@
+@import './../../../utils/variables';
+
+.wrapperIcon{
+    display:flex;
+    height:100%;
+    width:6.25rem;
+    justify-content: space-around;
+    align-items: center;
+        a{
+            color:$fontColor;
+            &:last-child{
+               font-size:1.25rem;
+            }
+        }
+}
