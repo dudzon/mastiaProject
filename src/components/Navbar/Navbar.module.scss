@@ -1,0 +1,15 @@
+@import './../../utils/_variables.scss';
+
+.navbar{
+    display:flex;
+    margin:0 auto;
+    width:1170px;
+    height:8.88rem;
+    justify-content:space-between;
+    align-items:center;
+    &__logo{
+        width:15.55rem;
+        height:5.55rem;
+        background: url('../../assets/logo.png');
+    }
+}

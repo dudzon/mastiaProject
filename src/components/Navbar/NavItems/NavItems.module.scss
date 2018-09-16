@@ -1,0 +1,18 @@
+@import '../../../utils/variables';
+
+.navItems{
+    width:29.45rem;
+    height:100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    a{
+        font-family: 'Open Sans' sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        color:$fontColor;
+        font-size:.77rem;
+        padding-left:20px;
+        
+    }
+}
