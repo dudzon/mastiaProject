@@ -6,12 +6,21 @@ module.exports = {
     title: 'Mastia Template  - simple bussiness website',
   },
   plugins: [
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
+        name: `data`,
         path: `${__dirname}/src/`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `img`,
+        path: `${__dirname}/src/`
+      }
     },
     'gatsby-plugin-react-helmet',
     {
@@ -22,5 +31,6 @@ module.exports = {
         precision: 8,
       },
     },
+
   ]
 }

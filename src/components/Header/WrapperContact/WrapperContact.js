@@ -3,7 +3,7 @@ import classes from './WrapperContact.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const wrapperContact = () => {
+const WrapperContact = () => {
     return(
         <div className={ classes.wrapperContact }>
             <div className={ classes.wrapperContact__container }>
@@ -22,4 +22,4 @@ const wrapperContact = () => {
     )
 }
 
-export default wrapperContact;
+export default WrapperContact;

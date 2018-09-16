@@ -3,7 +3,7 @@ import classes from './Header.module.scss'
 import WrapperIcon from './WrapperIcon/WrapperIcon'
 import WrapperContact from './WrapperContact/WrapperContact'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className= { classes.header }>
     <div className = { classes.header__wrapper }>
       <WrapperIcon />
@@ -12,4 +12,4 @@ const Header = ({ siteTitle }) => (
   </header>
 )
 
-export default Header
+export default Header;

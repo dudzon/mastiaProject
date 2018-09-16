@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header/Header'
+import Navbar from '../components/Navbar/Navbar'
 import './index.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -18,6 +19,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header/>
+    <Navbar />
     <div
       style={{
         margin: '0 auto',
@@ -45,5 +47,5 @@ export const query = graphql`
         title
       }
     }
-  }
+   }
 `

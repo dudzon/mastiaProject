@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './WrapperIcon.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const wrapperIcon = () => {
+const WrapperIcon = () => {
     return(
         <div className = { classes.wrapperIcon }>
             <a href="https://www.facebook.com">
@@ -22,4 +22,4 @@ const wrapperIcon = () => {
 }
 
 
-export default wrapperIcon;
+export default WrapperIcon;
