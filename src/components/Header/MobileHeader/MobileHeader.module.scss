@@ -1,0 +1,32 @@
+.mobileHeader{
+    display:none
+}
+
+@media screen and (max-width:768px){
+.mobileHeader{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 90%;
+    padding: 0;
+    height:100%;
+        &__logo{
+        width:7.77rem;
+        height:2.72rem;
+        background: url('./../../../assets/logo-mobile.png');
+        z-index:200;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    .mobileHeader{
+        &__logo{
+            // width:5.55rem;
+            height:1.77rem;
+            // z-index: 200;
+            background: url('./../../../assets/checkbox-logo-xs.png') no-repeat;
+        }
+    }
+}

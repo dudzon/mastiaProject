@@ -3,13 +3,36 @@
 .navbar{
     display:flex;
     margin:0 auto;
-    width:1170px;
-    height:8.88rem;
+    width:90%;
+    height:6.88rem;
     justify-content:space-between;
     align-items:center;
     &__logo{
         width:15.55rem;
         height:5.55rem;
         background: url('../../assets/logo.png');
+    }
+}
+
+@media screen and ( max-width:992px){
+    .navbar__logo{
+        width:11.66rem;
+        height:4.11rem;
+        background: url('../../assets/logo-md.png');
+    }
+}
+@media screen and ( max-width:857px){
+    .navbar{
+        height:4.44rem;
+        &__logo{
+            width:7.77rem;
+            height:2.72rem;
+            background: url('../../assets/logo-mobile.png');
+                }
+    }
+}
+@media screen and ( max-width:768px){
+    .navbar{
+        display:none;
     }
 }

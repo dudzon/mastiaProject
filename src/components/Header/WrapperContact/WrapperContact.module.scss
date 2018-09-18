@@ -4,10 +4,11 @@
     display:flex;
     justify-content: flex-end;
     height:100%;
+    width:50%;
     &__container{
         display:flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: flex-end;
         width:30%;
         span{
             font-family:'Open Sans',sans-serif;
@@ -18,5 +19,25 @@
         &:last-child{
             flex-grow:2;
         }
+    }
+}
+@media screen and ( max-width:1199px){
+    .wrapperContact{
+        width:60%;
+    }
+}
+@media screen and ( max-width:992px){
+    .wrapperContact{
+        width:75%;
+    }
+}
+@media screen and ( max-width:857px){
+    .wrapperContact .wrapperContact__container span{
+        font-size:.666rem;
+    }
+}
+@media screen and ( max-width:768px){
+    .wrapperContact{
+        display:none
     }
 }

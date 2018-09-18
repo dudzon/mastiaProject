@@ -13,6 +13,19 @@
         color:$fontColor;
         font-size:.77rem;
         padding-left:20px;
-        
+
+    }
+}
+@media screen and (max-width:768px){
+    .navItems{
+        width:100%;
+        margin:0 auto;
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: center;
+        a{
+            font-size:1.11rem;
+            padding: 10px 0 0 0 ;
+        }
     }
 }
