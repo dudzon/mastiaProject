@@ -20,21 +20,6 @@
         transition: all 0.3s ease-in-out;
     }
 }
-// .hamburger.isActive span:nth-child(2){
-//     opacity: 0;
-// }
-// .hamburger.isActive span:nth-child(1){
-//     -webkit-transform: translateY(11px) rotate(45deg);
-//     -ms-transform: translateY(11px) rotate(45deg);
-//     -o-transform: translateY(11px) rotate(45deg);
-//     transform: translateY(11px) rotate(45deg);
-// }
-// .hamburger.isActive span:nth-child(3){
-//     -webkit-transform: translateY(-11px) rotate(-45deg);
-//     -ms-transform: translateY(-11px) rotate(-45deg);
-//     -o-transform: translateY(-11px) rotate(-45deg);
-//     transform: translateY(-13px) rotate(-45deg);
-// }
 
 .hamburger.isActive {
     -webkit-transform: rotate(90deg);

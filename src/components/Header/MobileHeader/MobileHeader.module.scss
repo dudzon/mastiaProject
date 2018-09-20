@@ -23,9 +23,7 @@
 @media screen and (max-width:480px){
     .mobileHeader{
         &__logo{
-            // width:5.55rem;
             height:1.77rem;
-            // z-index: 200;
             background: url('./../../../assets/checkbox-logo-xs.png') no-repeat;
         }
     }

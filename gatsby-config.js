@@ -31,6 +31,14 @@ module.exports = {
         precision: 8,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Play:bold']
+        }
+      }
+    }
 
   ]
 }

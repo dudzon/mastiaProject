@@ -1,9 +1,11 @@
-import React from 'react'
+import React  from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header/Header'
 import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer/Footer'
+import BottomDiv from './../components/BottomDiv/BottomDiv'
 import './index.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -30,6 +32,8 @@ const Layout = ({ children, data }) => (
     >
       {children()}
     </div>
+    <Footer />
+    <BottomDiv />
   </div>
 )
 
