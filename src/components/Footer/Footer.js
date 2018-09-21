@@ -34,9 +34,9 @@ const Footer = () =>{
                     <div className= { classes.footer__textContainer }>
                         <h4>Get in Touch</h4>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        <span>84 Street, City, State 24813</span>
-                        <span>+00 (123) 456 78 90</span>
-                        <span>info@yourcompany.com</span>
+                        <span className = { classes.footer__iconGps }>84 Street, City, State 24813</span>
+                        <span className = { classes. footer__iconPhone}>+00 (123) 456 78 90</span>
+                        <span className = { classes. footer__iconMail }>info@yourcompany.com</span>
                     </div>
             </div>
         </footer>

@@ -1,5 +1,5 @@
 @import './../../utils/variables';
-
+@import './../../utils/placeholders';
 .footer{
  width:100%;
  height:15.55rem;
@@ -19,7 +19,7 @@
             flex-direction:column;
             justify-content: center;
             h4{
-                color:#22a7f0;
+                color:$footerTextColor;
                 font-family: 'Play', sans-serif;
                 text-transform:uppercase;
                 font-size:1.11rem;
@@ -29,51 +29,42 @@
             }
             p{
                 color:#fff;
-                font-family: 'Open Sans', sans-serif;
-                font-size:.77rem;
-                line-height:1.35rem;
-                margin:0;
+                @extend %footerText;
             }
             ul{
                 list-style-type: none;
                 margin:0;
             }
             ul li{
-                color:#fff;
-                font-family: 'Open Sans', sans-serif;
-                font-size:.77rem;
-                line-height:1.35rem;
-                margin:0;
+                @extend %footerText;
                 letter-spacing:0.28px;
                 &:before{
                     content:'>';
-                    color:#22a7f0;
+                    color:$footerTextColor;
                     padding-right:5px;
                 }
             }
-            span{
-                color:#fff;
-                font-family: 'Open Sans', sans-serif;
-                font-size:.77rem;
-                line-height:1.35rem;
-                margin:0;
-                letter-spacing:0.28px;
-                margin-left:20px;
-                position:relative;
+            .footer__iconMail{
+                @extend %footerSpanIcon;
                 &:before{
-                    content:'';
+                    @extend %footerSpanIconBefore;
                     background:url('./../../assets/mail-icon.png') no-repeat;
-                    width:15px;
-                    height:15px;
-                    padding-right:20px;
-                    position:absolute;
-                    top: 6px;
-                    left:-20px;
-                    padding-right:5px;
                 }
-
             }
-
+            .footer__iconPhone{
+                @extend %footerSpanIcon;
+                &:before{
+                    @extend %footerSpanIconBefore;
+                    background:url('./../../assets/phone-icon.png') no-repeat;
+                }
+            }
+            .footer__iconGps{
+                @extend %footerSpanIcon;
+                &:before{
+                    @extend %footerSpanIconBefore;
+                    background:url('./../../assets/gps-icon.png') no-repeat;
+                }
+            }
         }
         .footer__textContainer:nth-child(2){
             margin-left: 50px;
@@ -124,7 +115,6 @@
             }
         }
     }
-
 }
 @media screen and (max-width: 992px){
     .footer{
@@ -144,6 +134,18 @@
         }
     }
 }
+@media screen and ( max-width: 784px ){
+    .footer .footer__wrapper .footer__textContainer:nth-child(3),
+    .footer .footer__wrapper .footer__textContainer:nth-child(4){
+        height: 80%;
+        align-self: start;
+    }
+    .footer .footer__wrapper .footer__textContainer:nth-child(4){
+        h4{
+            margin-top:24px;
+        }
+    }
+}
 
 @media screen and ( max-width: 768px ){
     .footer{
@@ -155,6 +157,14 @@
         }
     }
 }
+@media screen and ( max-width:745px ){
+    .footer .footer__wrapper .footer__textContainer:nth-child(4){
+        h4{
+            margin-top:37px;
+        }
+    }
+}
+
 @media screen and (max-width: 736px){
 
     .footer .footer__wrapper .footer__textContainer:nth-child(1){
@@ -163,11 +173,29 @@
         }
     }
 }
+@media screen and ( max-width:684.98px ){
+    .footer{
+        height:27rem;
+    }
+    .footer .footer__wrapper .footer__textContainer:nth-child(4){
+        h4{
+            margin-top:60px;
+        }
+    }
+}
 @media screen and (max-width: 654px){
 
     .footer .footer__wrapper .footer__textContainer:nth-child(1){
         h4{
             margin-top:48px;
+        }
+    }
+}
+@media screen and (max-width: 625px){
+
+    .footer .footer__wrapper .footer__textContainer:nth-child(3){
+        h4{
+            margin-top:21px;
         }
     }
 }
@@ -183,12 +211,58 @@
                 width:70%;
                 margin: 0 auto;
                 text-align: center;
+                .footer__iconMail:before,
+                .footer__iconPhone:before,
+                .footer__iconGps:before{
+                    left:40px;
+                }
+            }
+            .footer__textContainer:nth-child(3),
+            .footer__textContainer:nth-child(4){
+                height:25%;
+            }
+            .footer__textContainer:nth-child(4){
+                h4{
+                    margin-top:0;
+                }
             }
         }
     }
 }
+@media screen and (max-width: 521px){
+
+            .footer .footer__wrapper .footer__textContainer .footer__iconMail:before,
+            .footer .footer__wrapper .footer__textContainer .footer__iconPhone:before,
+            .footer .footer__wrapper .footer__textContainer .footer__iconGps:before{
+                    left:25px;
+                }
+}
 @media screen and ( max-width: 480px ){
     .footer{
         margin-top:9.2rem;
+    }
+}
+@media screen and (max-width: 440px){
+    .footer .footer__wrapper .footer__textContainer .footer__iconMail:before,
+    .footer .footer__wrapper .footer__textContainer .footer__iconPhone:before,
+    .footer .footer__wrapper .footer__textContainer .footer__iconGps:before{
+            left:13px;
+        }
+}
+@media screen and (max-width: 399px){
+    .footer .footer__wrapper .footer__textContainer .footer__iconMail:before{
+        background: url('./../../assets/mail-icon-sm.png') no-repeat;
+    }
+    .footer .footer__wrapper .footer__textContainer .footer__iconPhone:before{
+        background: url('./../../assets/phone-icon-sm.png') no-repeat;
+    }
+    .footer .footer__wrapper .footer__textContainer .footer__iconGps:before{
+        background: url('./../../assets/gps-icon-sm.png') no-repeat;
+    }
+    .footer .footer__wrapper .footer__textContainer .footer__iconMail:before,
+    .footer .footer__wrapper .footer__textContainer .footer__iconPhone:before,
+    .footer .footer__wrapper .footer__textContainer .footer__iconGps:before{
+        height:10px;
+        left:2px;
     }
 }
