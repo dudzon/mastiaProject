@@ -22,16 +22,9 @@ const Layout = ({ children, data }) => (
     />
     <Header/>
     <Navbar />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 1170,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <main className = 'main__container'>
       {children()}
-    </div>
+    </main>
     <Footer />
     <BottomDiv />
   </div>

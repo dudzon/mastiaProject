@@ -1,0 +1,36 @@
+@import './../../utils/variables';
+@import './../../utils/placeholders';
+.blueBar{
+    width:100%;
+    height:6.66rem;
+    background:$defaultThemeColor;
+    .blueBar__wrapper{
+        width:90%;
+        height:100%;
+        margin:0 auto;
+        display:flex;
+        align-items: center;
+        justify-content:space-around;
+        .blueBar__header{
+           @extend %textOnBlueBar;
+            margin:0;
+            font-size:1.33rem;
+            line-height: 1.88rem;
+        }
+    }
+}
+@media screen and (max-width:992px){
+    .blueBar{
+        height:4.5rem;
+        .blueBar__wrapper{
+            .blueBar__header{
+                font-size:1rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .blueBar{
+        display:none;
+    }
+}

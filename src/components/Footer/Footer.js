@@ -1,10 +1,13 @@
 import React from 'react'
 import classes from './Footer.module.scss'
+import BlueBar from './../BlueBar/BlueBar'
 
 
 const Footer = () =>{
 
     return(
+        <div>
+        <BlueBar />
         <footer className = { classes.footer }>
             <div className= { classes.footer__wrapper }>
                     <div className= { classes.footer__textContainer }>
@@ -40,6 +43,7 @@ const Footer = () =>{
                     </div>
             </div>
         </footer>
+        </div>
     )
 }
 export default Footer

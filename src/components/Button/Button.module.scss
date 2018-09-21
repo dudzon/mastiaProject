@@ -1,0 +1,29 @@
+@import './../../utils/variables';
+@import './../../utils/placeholders';
+.button{
+    @extend %textOnBlueBar;
+    background: transparent;
+    outline: 0;
+    border:2px solid #fff;
+    width:9.72rem;
+    height:2.77rem;
+    cursor:pointer;
+    &:hover{
+        background:$mainColor;
+        color: $defaultThemeColor;
+        border:2px solid $mainColor;
+    }
+}
+
+@media screen and (max-width:992px){
+    .button{
+        font-size:.8rem;
+        width:7rem;
+        height:2.2rem;
+    }
+}
+@media screen and (max-width:768px){
+    .button{
+        display:none;
+    }
+}

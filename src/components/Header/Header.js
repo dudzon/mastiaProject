@@ -1,4 +1,5 @@
 import React,{ Component } from 'react'
+import PropTypes from 'prop-types'
 import classes from './Header.module.scss'
 import WrapperIcon from './WrapperIcon/WrapperIcon'
 import WrapperContact from './WrapperContact/WrapperContact'
@@ -35,4 +36,7 @@ class Header extends Component{
   }
 }
 
+Header.propTypes = {
+  isSideDrawerOpened : PropTypes.bool,
+}
 export default Header;

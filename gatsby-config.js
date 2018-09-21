@@ -35,7 +35,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Play:bold']
+          families: ['Play']
         }
       }
     }
