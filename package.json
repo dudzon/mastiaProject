@@ -21,7 +21,8 @@
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
     "postcss-focus": "^4.0.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "render-fragment": "^0.1.1"
   },
   "keywords": [
     "gatsby"
