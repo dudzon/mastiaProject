@@ -1,15 +1,79 @@
+@import './../../utils/variables';
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
 .main__carousel{
 
     .carousel__item1{
-        background: url('./../../assets/rawpixel-565456-unsplash-min.jpg') no-repeat;
+        background:$mainCarouselGradient,
+                   url('./../../assets/rawpixel-565456-unsplash-min.jpg') no-repeat;
         background-size:cover;
     }
     .carousel__item2{
-        background: url('./../../assets/rawpixel-574844-unsplash-min.jpg') no-repeat;
+        background:$mainCarouselGradient,
+                   url('./../../assets/rawpixel-574844-unsplash-min.jpg') no-repeat;
         background-size:cover;
     }
     .carousel__item3{
-        background: url('./../../assets/rawpixel-684806-unsplash-min.jpg') no-repeat;
+        background: $mainCarouselGradient,
+                    url('./../../assets/rawpixel-684806-unsplash-min.jpg') no-repeat;
         background-size:cover;
+        background-position:  0 -50px;
+    }
+    .carousel__inner{
+        display:flex;
+        width:60%;
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+        position:relative;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        .carousel__title{
+            text-transform:uppercase;
+            color:#fff;
+            font-size:2.77rem;
+            font-family: 'Raleway';
+            font-weight:600;
+            text-align: center;
+            line-height: 3rem;
+            text-shadow: 0 0 10px #fff;
+        }
+    }
+}
+@media screen and (max-width:905px){
+    .main__carousel{
+        .carousel__item3{
+        background-position: center,center;
+        }
+    }
+}
+@media screen and (max-width:992px){
+    .main__carousel{
+        // z-index: -10;
+        .carousel__inner{
+            .carousel__title{
+                font-size:2.5rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .main__carousel{
+        // height:auto;
+        .carousel__inner{
+            .carousel__title{
+                font-size:2.22rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:576px){
+    .main__carousel{
+        .carousel__inner{
+            .carousel__title{
+                font-size:1.66rem;
+                line-height: 2.5rem;
+            }
+        }
     }
 }

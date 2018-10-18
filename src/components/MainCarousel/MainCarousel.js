@@ -8,8 +8,6 @@ class MainCarousel extends Component {
        height: null
     }
 
-
-
       componentDidMount() {
         const height = Math.floor(this.divElement.getBoundingClientRect().top);
         console.log(height)
@@ -22,15 +20,28 @@ class MainCarousel extends Component {
         console.log(clientH)
         console.log(imgHeight)
         return(
-            <Carousel className={classes.main__carousel} autoplay={true} wrapAround ={true} >
-                <div className= {classes.carousel__item1 } ref={ (divElement) => this.divElement = divElement} style ={{height:imgHeight}} >
-                    <p>Text1</p>
+            <Carousel className ={classes.main__carousel}  wrapAround ={true} >
+                <div className = {classes.carousel__item1 } ref={ (divElement) => this.divElement = divElement} style ={{height:imgHeight}} >
+                    <div className = {classes.carousel__inner}>
+                        <p className = {classes.carousel__title}>We care about your business</p>
+                        <p className = {classes.carousel__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur egestas. Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla</p>
+                        <button className = {classes.carousel__button}>About us</button>
+                    </div>
+
                 </div>
                 <div className= {classes.carousel__item2} style ={{height:imgHeight}}>
-                    <p>Text2</p>
+                    <div className={classes.carousel__inner}>
+                        <p className={classes.carousel__title}>We make your business stronger</p>
+                        <p className={classes.carousel__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur egestas. Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla</p>
+                        <button className={classes.carousel__button}>About us</button>
+                    </div>
                 </div>
                 <div className= {classes.carousel__item3} style ={{height:imgHeight}}>
-                    <p>Text3</p>
+                    <div className={classes.carousel__inner}>
+                        <p className={classes.carousel__title}>We are happy to help you</p>
+                        <p className={classes.carousel__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur egestas. Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla</p>
+                        <button className={classes.carousel__button}>About us</button>
+                    </div>
                 </div>
             </Carousel>
         )
