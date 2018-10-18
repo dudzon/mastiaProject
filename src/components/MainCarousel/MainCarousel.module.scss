@@ -1,22 +1,25 @@
 @import './../../utils/variables';
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
 .main__carousel{
-
+    height: 500px !important;
     .carousel__item1{
         background:$mainCarouselGradient,
                    url('./../../assets/rawpixel-565456-unsplash-min.jpg') no-repeat;
         background-size:cover;
+        height: 500px !important;
     }
     .carousel__item2{
         background:$mainCarouselGradient,
                    url('./../../assets/rawpixel-574844-unsplash-min.jpg') no-repeat;
         background-size:cover;
+        height: 500px !important;
     }
     .carousel__item3{
         background: $mainCarouselGradient,
                     url('./../../assets/rawpixel-684806-unsplash-min.jpg') no-repeat;
         background-size:cover;
         background-position:  0 -50px;
+        height: 500px !important;
     }
     .carousel__inner{
         display:flex;
@@ -30,15 +33,35 @@
         transform: translate(-50%,-50%);
         .carousel__title{
             text-transform:uppercase;
-            color:#fff;
+            color:$mainCarouselTextColor;
             font-size:2.77rem;
             font-family: 'Raleway';
             font-weight:600;
             text-align: center;
             line-height: 3rem;
-            text-shadow: 0 0 10px #fff;
+            text-shadow: 0 0 10px$mainCarouselTextColor;
+        }
+        .carousel__text{
+            font-family:'Open Sans',sans-serif;
+            color:$mainCarouselTextColor;
+            text-align:center;
+            width:70%;
+            line-height:1.22rem;
+            font-size:.88rem;
+        }
+        .carousel__button{
+            background:transparent;
+            outline:0;
+            border: 2px solid $mainCarouselTextColor;
+            width:8.05rem;
+            height:2.44rem;
+            cursor:pointer;
+            font-family:'Play',sans-serif;
+            color:$mainCarouselTextColor;
+            margin-top:5px;
         }
     }
+
 }
 @media screen and (max-width:905px){
     .main__carousel{
