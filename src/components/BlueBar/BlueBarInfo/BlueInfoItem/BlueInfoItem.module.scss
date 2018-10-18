@@ -1,0 +1,55 @@
+@import './../../../../utils/variables';
+.blueInfoItem{
+    display:flex;
+    color:#fff;
+    flex-direction:column;
+    width:20%;
+    height:100%;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Play', sans-serif;
+    h3{
+        font-size:2.77rem;
+        line-height:3.27rem;
+        margin-bottom:10px;
+    }
+    div{
+        width: 40px;
+        height: 2px;
+        background: #fff;
+        margin:0 auto 10px;;
+    }
+    p{
+        text-transform:uppercase;
+        font-size:1.44rem;
+        text-align:center;
+    }
+}
+
+@media screen and ( max-width:1299px){
+    .blueInfoItem{
+        width:25%;
+        h3{
+            font-size:2.22rem;
+        }
+        p{
+            font-size:1.11rem;
+        }
+    }
+}
+@media screen and ( max-width:1099px){
+    .blueInfoItem{
+        width:25%;
+        h3{
+            font-size:1.66rem;
+        }
+        p{
+            font-size:1rem;
+        }
+    }
+}
+// @media screen and ( max-width:992px ){
+//     .blueInfoItem{
+//         display:none;
+//     }
+// }
