@@ -8,9 +8,19 @@ class MainCarousel extends Component {
 
     state = {
         slideIndex: 0,
-        clientWidth:window.innerWidth
+        clientWidth:0
       };
 
+      handleWindowSize = () => {
+        this.setState({ clientWidth: window.innerWidth })
+      }
+      componentDidMount() {
+        this.handleWindowSize()
+        window.addEventListener('resize', this.handleWindowSize)
+      }
+      componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSize)
+      }
     render(){
         let leftArrowStyle;
         let leftButtonStyle =
