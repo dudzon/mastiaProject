@@ -1,0 +1,95 @@
+@import './../../utils/variables';
+.BlackBox{
+    width:100%;
+    height:22.22rem;
+    background:#313131;
+    &__wrapper{
+        width:90%;
+        height:100%;
+        margin:0 auto;
+        display:flex;
+        justify-content: center;
+        .BlackBox__item{
+            width:30%;
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            .BlackBox__icon{
+                border:3px solid $footerTextColor;
+                height:7rem;
+                width:7rem;
+                margin:3rem auto 1rem;
+                border-radius:50%;
+            }
+            .BlackBox__title{
+                color:$mainTextColor;
+                font-family:'Play',sans-serif;
+                font-size:1.33rem;
+                line-height:1.43rem;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight:400;
+            }
+            .BlackBox__text{
+                color:$mainTextColor;
+                font-family: "Open Sans",sans-serif;
+                text-align: center;
+                font-weight:400;
+                line-height:1.43rem;
+                font-size:.83rem;
+                width:80%;
+                margin:0 auto;
+            }
+        }
+        .BlackBox__item:nth-child(1) .BlackBox__icon {
+            background:url('./../../assets/black-box-icon-1.png') no-repeat;
+            background-position: center;
+        }
+        .BlackBox__item:nth-child(2) .BlackBox__icon{
+            background:url('./../../assets/black-box-icon-2.png') no-repeat;
+            background-position: center;
+        }
+        .BlackBox__item:nth-child(3) .BlackBox__icon{
+            background:url('./../../assets/black-box-icon-3.png') no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+@media screen and (max-width:992px){
+    .BlackBox{
+        &__wrapper{
+            .BlackBox__item{
+                .BlackBox__icon{
+                    width:5rem;
+                    height:5rem;
+                }
+                .BlackBox__title{
+                    font-size:1.2rem;
+                    line-height:1.3rem;
+                }
+                .BlackBox__text{
+                    font-size:.77rem;
+                    line-height:1.1rem;
+                }
+            }
+            .BlackBox__item:nth-child(1) .BlackBox__icon{
+                background:url('./../../assets/black-box-icon-1-sm.png') no-repeat;
+                background-position: center;
+            }
+            .BlackBox__item:nth-child(2) .BlackBox__icon{
+                background:url('./../../assets/black-box-icon-2-sm.png') no-repeat;
+                background-position: center;
+            }
+            .BlackBox__item:nth-child(3) .BlackBox__icon{
+                background:url('./../../assets/black-box-icon-3-sm.png') no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .BlackBox{
+        display:none;
+    }
+}
