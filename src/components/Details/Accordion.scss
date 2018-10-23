@@ -1,0 +1,70 @@
+@import './../../utils/variables';
+@import './../../utils/placeholders';
+.Accordion {
+    border: 1px solid #3d3d3d;;
+    position: relative;
+    margin-bottom: 10px;
+    width: 90%;
+    overflow: hidden;
+    border:1px solid #ebebeb;
+    padding-left: 3.44rem;
+}
+
+  .Accordion__header {
+    height: 3.44rem;
+    display: flex;
+    align-items: center;
+    border:1px solid #ebebeb;
+    color: $mainTextColor;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    font-size:.83rem;
+    line-height:1.43;
+    padding-left:10px;
+    background:#353535;
+    cursor:pointer;
+
+}
+.Accordion__header:before {
+    background: url('./../../assets/arrow-white.png'),
+    $footerTextColor;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    z-index:-1;
+    left: 0;
+    @include accordionBefore;
+}
+
+  .Accordion__header--collapsed{
+      color:#353535;
+      background:$mainTextColor;
+  }
+   .Accordion__header--collapsed:before {
+    background: url('./../../assets/arrow-icon.png'),
+    #fff;
+    @include accordionBefore;
+     }
+
+  .Accordion__body {
+    height: 4.44rem;
+    opacity: 1;
+    overflow-y: hidden;
+    overflow-x: auto;
+    transition: all 0.2s;
+    padding: 15px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    font-size:.83rem;
+    line-height:1.43;
+    p{
+        position: absolute;
+        left: 30px;
+    }
+}
+
+  .Accordion__body--collapsed {
+    height: 0;
+    opacity: 0;
+    padding: 0 70px;
+    transition: all 0.2s; }
+
