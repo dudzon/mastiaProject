@@ -31,3 +31,23 @@
     font-weight:400;
     text-transform:uppercase;
 }
+
+%aboutText{
+    color:$mainTextColor;
+    font-family: "Open Sans",sans-serif;
+    text-align: center;
+    font-weight:400;
+    line-height:1.43rem;
+    font-size:.83rem;
+}
+
+@mixin accordionBefore{
+    content:'';
+    width:3.44rem;
+    height:3.44rem;;
+    display: inline-block;
+    position:absolute;
+    background-repeat: no-repeat;
+    background-position:center;
+    margin-right:10px;
+}
