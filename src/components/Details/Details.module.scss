@@ -8,7 +8,7 @@
 
     &__wrapper{
         height:100%;
-        width:90%;
+        width:1170px;
         margin:0 auto;
         display:flex;
         justify-content: space-around;
@@ -42,6 +42,7 @@
                 line-height: 1.43rem;
                 text-transform:uppercase;
                 font-weight:400;
+                margin-top:2.7rem;
             }
             .Details__paragraph{
                 @extend %aboutText;
@@ -78,6 +79,7 @@
 @media screen and (max-width:1199px){
     .Details{
         &__wrapper{
+            width:90%;
             .Details__accordion{
                 .Details__title{
                     margin-top:0;
