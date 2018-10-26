@@ -10,7 +10,7 @@ import Team from './../components/Team/Team'
 
 const About = () => (
   <div>
-    <BlueBarTop title = 'About us'/>
+    <BlueBarTop title = 'About us' />
     <Testimonial/>
     <BlackBox />
     <Details />
