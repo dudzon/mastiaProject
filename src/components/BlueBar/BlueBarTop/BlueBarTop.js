@@ -7,7 +7,7 @@ const BlueBarTop = ( props ) => {
     <div className ={ classes.blueBarTop}>
         <div className = { classes.wrapper}>
             <h3 className = {classes.title}>{ title }</h3>
-            <p className = {classes.breadcrumbs}> Home > About Us</p>
+            <p className = {classes.breadcrumbs}> Home > { title }</p>
         </div>
     </div>
   )
