@@ -16,7 +16,6 @@
             font-size:1.94rem;
             line-height:1.33rem;
             position:relative;
-            height:1.5rem;
             margin:4.14rem 0 0 0;
 
             &:after{
@@ -61,7 +60,7 @@
                 color:$placeholderColor;
                 font-family:$secondFont;
                 padding-left:1rem;
-                // resize:none;
+                resize:none;
                 &::placeholder{
                     @extend %inputField;
                 }
@@ -84,6 +83,45 @@
                 border:1px solid $footerTextColor;
                 color:$defaultThemeColor;
                 transition:all .3s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1199px){
+    .form{
+        .form__wrapper{
+            width:90%;
+            .form__title{
+                margin-top:2rem;
+                font-size:1.5rem;
+                line-height:1.23rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:576px){
+    .form{
+        .form__wrapper{
+            .form__title{
+            }
+            .form__element{
+                .form__flex{
+                    .form__item{
+                        font-size:.66rem;
+                        &::placeholder{
+                            font-size:.66rem;
+                        }
+                    }
+                }
+                .form__textarea{
+                    font-size:.66rem;
+                    &::placeholder{
+                        font-size:.66rem;
+                    }
+                }
             }
         }
     }
