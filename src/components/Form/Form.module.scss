@@ -45,8 +45,12 @@
                     font-family:$secondFont;
                     padding-left:1rem;
                     border:1px solid $placeholderColor;
+                    position:relative;
                     &::placeholder{
                         @extend %inputField;
+                    }
+                    &:invalid{
+                        border:1px solid rgb(251, 114, 154);
                     }
 
                 }
@@ -66,27 +70,39 @@
                 &::placeholder{
                     @extend %inputField;
                 }
+                &:invalid{
+                    border:1px solid rgb(251, 114, 154);
+                }
             }
         }
         .form__button{
             background:$footerTextColor;
             width:7.33rem;
             height:2.61rem;
-            border:1px solid $mainTextColor;
-            outline:0;
+            border:1px solid $footerTextColor;
+            outline:none;
             margin-top:1rem;
             color:$mainTextColor;
             font-family: 'Raleway',sans-serif;
             font-weight:700;
             text-transform:uppercase;
+            box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.4);
             cursor:pointer;
-            &:hover{
-                background: $mainTextColor;
-                border:1px solid $footerTextColor;
-                color:$defaultThemeColor;
-                transition:all .3s ease-in-out;
+            &:active{
+                background:$footerTextColor;
+                box-shadow: none;
             }
         }
+    }
+    .form__confirmation{
+        color:red;
+        text-align:center;
+        visibility:hidden;
+        font-family:'Raleway',sans-serif;
+        
+    }
+    .confirmation__visible{
+        visibility:visible;
     }
 }
 
