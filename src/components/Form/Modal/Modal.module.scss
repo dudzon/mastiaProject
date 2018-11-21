@@ -7,7 +7,7 @@
     position:fixed;
     top:0;
     left:0;
-    z-index: 30;
+    z-index: 1000;
     overflow: hidden;
     background:rgba(0, 0, 0, 0.8);
     visibility: hidden;
@@ -36,12 +36,13 @@
     .Modal__content{
         width:90%;
         margin:0 auto;
+
         .Modal__buttons{
             display:flex;
             width:50%;
             margin:0 auto;
             justify-content: space-between;
-            padding-top:2rem;
+            padding:2rem 0 ;
             .Modal__edit,
             .Modal__send{
                 width:8rem;
@@ -66,5 +67,34 @@
                 color:$mainTextColor;
              }
         }
+    }
+}
+@media screen and( max-width:992px){
+    .Modal .Modal__wrapper .Modal__content .Modal__buttons{
+        width:70%;
+    }
+}
+@media screen and( max-width:768px){
+    .Modal .Modal__wrapper .Modal__content .Modal__buttons{
+        width:90%;
+    }
+    .Modal .Modal__wrapper .Modal__title{
+        font-size:1rem;
+        line-height:1.33rem;
+    }
+    .Modal .Modal__wrapper .Modal__content p{
+        font-size:.88rem;
+        line-height:1.11rem;
+    }
+}
+@media screen and (max-width:576px){
+    .Modal .Modal__wrapper .Modal__title{
+        font-size:1rem;
+        line-height:1.33rem;
+    }
+    .Modal .Modal__wrapper .Modal__content .Modal__buttons{
+       flex-direction: column;
+       align-items: center;
+       height:10rem;
     }
 }
