@@ -4,10 +4,13 @@ import classes from './Modal.module.scss'
 const Modal = ( props ) => {
 
     const { visible,firstname,lastname,email,website,message,close,edit } = props;
-    const html = document.querySelector('html');
-    let scrollbar = ( visible == false ) ? ( html.style.overflow ='auto') : ( html.style.overflow ='hidden');
+    if( typeof document !=='undefined'){
+        const html = document.querySelector('html');
+        let scrollbar = ( visible == false ) ? ( html.style.overflow ='auto') : ( html.style.overflow ='hidden');
+    }
     let modalVisible= [];
     modalVisible = ( visible == false) ?  ( [classes.Modal] ) : ( [classes.Modal,classes.visible] );
+
     return (
         <div className ={ modalVisible.join(' ')}>
             <div className={ classes.Modal__wrapper }>
