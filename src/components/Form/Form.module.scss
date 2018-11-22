@@ -99,7 +99,7 @@
         text-align:center;
         visibility:hidden;
         font-family:'Raleway',sans-serif;
-        
+
     }
     .confirmation__visible{
         visibility:visible;
@@ -119,6 +119,54 @@
     }
 }
 
+@media screen and (max-width:992px){
+    .form{
+        .form__wrapper{
+            .form__title{
+            }
+            .form__element{
+                .form__flex{
+                    .form__item{
+                        font-size:.88rem;
+                        &::placeholder{
+                            font-size:.88rem;
+                        }
+                    }
+                }
+                .form__textarea{
+                    font-size:.88rem;
+                    &::placeholder{
+                        font-size:.88rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .form{
+        .form__wrapper{
+            .form__title{
+            }
+            .form__element{
+                .form__flex{
+                    .form__item{
+                        font-size:.77rem;
+                        &::placeholder{
+                            font-size:.77rem;
+                        }
+                    }
+                }
+                .form__textarea{
+                    font-size:.77rem;
+                    &::placeholder{
+                        font-size:.77rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width:576px){
     .form{
