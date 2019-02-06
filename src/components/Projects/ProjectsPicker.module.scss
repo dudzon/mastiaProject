@@ -1,0 +1,125 @@
+@import './../../utils/variables';
+@import './../../utils/placeholders';
+
+.projectsPicker {
+    width: $containerWidth;
+    margin: 0 auto;
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+
+    &__list {
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+
+        .list_item {
+            color: $fontColor;
+            font-family: $secondFont;
+            font-size: .77rem;
+            line-height: 1.33rem;
+            height: 80%;
+            padding: 5px;
+            cursor: pointer;
+            position: relative;
+
+            &::after {
+                content: "/";
+                position: absolute;
+                top: 5px;
+                right: -1.75rem;
+            }
+        }
+
+        .list_item:last-child::after {
+            content: "";
+        }
+    }
+}
+
+.active {
+    border-bottom: 2px solid $defaultThemeColor;
+}
+
+@media screen and (max-width:1199px) {
+    .projectsPicker {
+        width: 90%;
+
+        &__list {
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .projectsPicker {
+        &__list {
+            width: 50%;
+
+            .list_item::after {
+                right: -1.25rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .projectsPicker {
+        &__list {
+            width: 55%;
+
+            .list_item::after {
+                right: -1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:670px) {
+    .projectsPicker {
+        &__list {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .projectsPicker {
+        justify-content: center;
+
+        &__list {
+            width: 80%;
+            justify-content: space-around;
+
+            .list_item::after {
+                right: -1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:499px) {
+    .projectsPicker {
+        &__list {
+            width: 90%;
+            // justify-content: space-around;
+
+            .list_item::after {
+                right: -1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:399px) {
+    .projectsPicker {
+        &__list {
+            width: 90%;
+            // justify-content: space-around;
+
+            .list_item::after {
+                right: -.6rem;
+            }
+        }
+    }
+}

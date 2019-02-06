@@ -1,0 +1,42 @@
+@import './../../utils/variables';
+@import './../../utils/placeholders';
+
+.projectsHeader {
+    width: 100%;
+    height: 3.66rem;
+
+    &__wrapper {
+        width: $containerWidth;
+        margin: 0 auto;
+        height: 80%;
+
+        .projectsHeader__title {
+            font-family: $mainFont, sans-serif;
+            color: $defaultThemeColor;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 1.94rem;
+            line-height: 1.33rem;
+            position: relative;
+            margin: 4.14rem 0 0 0;
+
+            &:after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 77px;
+                background: $defaultThemeColor;
+                bottom: -15px;
+                left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .projectsHeader {
+        &__wrapper {
+            width: 90%;
+        }
+    }
+}
