@@ -1,37 +1,40 @@
 @import './../../../utils/variables';
 
 .blueBarTop {
-    width:100%;
-    height:3.72rem;
+    width: 100%;
+    height: 3.72rem;
     background: $footerTextColor;
-    .wrapper{
-        width:1170px;
-        height:100%;
-        margin:0 auto;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        .title{
-            font-family: $mainFont,sans-serif;
-            color:$mainTextColor;
+
+    .wrapper {
+        width: $containerWidth;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-family: $mainFont, sans-serif;
+            color: $mainTextColor;
             text-transform: uppercase;
-            margin:0;
-            font-weight:400;
-            font-size:1.33rem;
+            margin: 0;
+            font-weight: 400;
+            font-size: 1.33rem;
         }
-        .breadcrumbs{
-            color:$mainTextColor;
-            font-family: $secondFont,sans-serif;
-            font-size:.77rem;
-            margin:0;
+
+        .breadcrumbs {
+            color: $mainTextColor;
+            font-family: $secondFont, sans-serif;
+            font-size: .77rem;
+            margin: 0;
         }
     }
 }
 
-@media screen and (max-width:1199px){
-    .blueBarTop{
-        .wrapper{
-            width:90%;
+@media screen and (max-width:1199px) {
+    .blueBarTop {
+        .wrapper {
+            width: 90%;
         }
     }
 }

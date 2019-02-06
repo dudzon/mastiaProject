@@ -1,81 +1,94 @@
 @import './../../utils/variables';
 @import './../../utils/placeholders';
 
-.Team{
-    width:100%;
-    height:36.11rem;
-    background:$mainTextColor;
-    margin-top:-3rem;
-    &__wrapper{
-        width:1170px;
-        height:100%;
-        margin:0 auto;
-        .Team__title{
+.Team {
+    width: 100%;
+    height: 36.11rem;
+    background: $mainTextColor;
+    margin-top: -3rem;
+
+    &__wrapper {
+        width: $containerWidth;
+        height: 100%;
+        margin: 0 auto;
+
+        .Team__title {
             @extend %textOnBlueBar;
-            color:$defaultThemeColor;
+            color: $defaultThemeColor;
         }
-        .Team__members{
-            display:flex;
-            width:100%;
-            flex-flow:row wrap;
-            font-size:0;
+
+        .Team__members {
+            display: flex;
+            width: 100%;
+            flex-flow: row wrap;
+            font-size: 0;
         }
     }
 }
 
 @media screen and (max-width:1199px) {
     .Team {
-        height:32rem;
+        height: 32rem;
+
         &__wrapper {
-          width: 90%;
+            width: 90%;
         }
     }
 }
+
 @media screen and (max-width:992px) {
     .Team {
-        height:28rem;
+        height: 28rem;
         margin-top: 0;
     }
 }
+
 @media screen and (max-width:835px) {
     .Team {
-        height:62rem;
+        height: 62rem;
         margin-top: 0;
     }
 }
+
 @media screen and (max-width:720px) {
     .Team {
-        height:57rem;
+        height: 57rem;
     }
 }
+
 @media screen and (max-width:650px) {
     .Team {
-        height:52rem;
+        height: 52rem;
     }
 }
+
 @media screen and (max-width:599px) {
     .Team {
-        height:47rem;
+        height: 47rem;
     }
 }
+
 @media screen and (max-width:520px) {
     .Team {
-        height:44rem;
+        height: 44rem;
     }
 }
+
 @media screen and (max-width:399px) {
     .Team {
-        height:39rem;
+        height: 39rem;
     }
 }
+
 @media screen and (max-width:365px) {
     .Team {
-        margin-top:2rem;
-        height:36rem;
+        margin-top: 2rem;
+        height: 36rem;
     }
 }
+
 @media screen and (max-width:330px) {
     .Team {
-        height:32rem;
+        height: 32rem;
     }
 }

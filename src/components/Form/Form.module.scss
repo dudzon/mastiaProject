@@ -1,166 +1,161 @@
 @import './../../utils/variables';
 @import './../../utils/placeholders';
 
-.form{
-    width:100%;
-    height:30rem;
-    &__wrapper{
-        width:1170px;
-        margin:0 auto;
-        height:80%;
-        .form__title{
-            font-family: $mainFont, sans-serif;
-            color:$defaultThemeColor;
-            font-weight:400;
-            text-transform:uppercase;
-            font-size:1.94rem;
-            line-height:1.33rem;
-            position:relative;
-            margin:4.14rem 0 0 0;
+.form {
+    width: 100%;
+    height: 30rem;
 
-            &:after{
-                content:'';
-                position:absolute;
-                height:2px;
-                width:77px;
+    &__wrapper {
+        width: $containerWidth;
+        margin: 0 auto;
+        height: 80%;
+
+        .form__title {
+            font-family: $mainFont, sans-serif;
+            color: $defaultThemeColor;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 1.94rem;
+            line-height: 1.33rem;
+            position: relative;
+            margin: 4.14rem 0 0 0;
+
+            &:after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 77px;
                 background: $defaultThemeColor;
-                bottom:-15px;
-                left:0;
+                bottom: -15px;
+                left: 0;
             }
         }
-        .form__element{
-            width:100%;
-            height:80%;
-            margin:3rem 0 0;
-            .form__flex{
-                display:flex;
-                width:100%;
-                height:2.5rem;
+
+        .form__element {
+            width: 100%;
+            height: 80%;
+            margin: 3rem 0 0;
+
+            .form__flex {
+                display: flex;
+                width: 100%;
+                height: 2.5rem;
                 justify-content: space-between;
-                .form__item{
-                    width:50%;
-                    margin-right:2rem;
-                    height:100%;
-                    color:$placeholderColor;
-                    font-family:$secondFont;
-                    padding-left:1rem;
-                    border:1px solid $placeholderColor;
-                    position:relative;
-                    &::placeholder{
+
+                .form__item {
+                    width: 50%;
+                    margin-right: 2rem;
+                    height: 100%;
+                    color: $placeholderColor;
+                    font-family: $secondFont;
+                    padding-left: 1rem;
+                    border: 1px solid $placeholderColor;
+                    position: relative;
+
+                    &::placeholder {
                         @extend %inputField;
                     }
-                    &:invalid{
-                        border:1px solid rgb(251, 114, 154);
+
+                    &:invalid {
+                        border: 1px solid rgb(251, 114, 154);
                     }
 
                 }
-                .form__item:nth-child(2){
-                    margin:0;
+
+                .form__item:nth-child(2) {
+                    margin: 0;
                 }
             }
-            .form__textarea{
-                width:100%;
-                height:9rem;
-                margin-top:1.5rem;
-                color:$placeholderColor;
-                font-family:$secondFont;
-                padding-left:1rem;
-                border:1px solid $placeholderColor;
-                resize:none;
-                &::placeholder{
+
+            .form__textarea {
+                width: 100%;
+                height: 9rem;
+                margin-top: 1.5rem;
+                color: $placeholderColor;
+                font-family: $secondFont;
+                padding-left: 1rem;
+                border: 1px solid $placeholderColor;
+                resize: none;
+
+                &::placeholder {
                     @extend %inputField;
                 }
-                &:invalid{
-                    border:1px solid rgb(251, 114, 154);
+
+                &:invalid {
+                    border: 1px solid rgb(251, 114, 154);
                 }
             }
         }
-        .form__button{
-            background:$footerTextColor;
-            width:7.33rem;
-            height:2.61rem;
-            border:1px solid $footerTextColor;
-            outline:none;
-            margin-top:1rem;
-            color:$mainTextColor;
-            font-family: 'Raleway',sans-serif;
-            font-weight:700;
-            text-transform:uppercase;
+
+        .form__button {
+            background: $footerTextColor;
+            width: 7.33rem;
+            height: 2.61rem;
+            border: 1px solid $footerTextColor;
+            outline: none;
+            margin-top: 1rem;
+            color: $mainTextColor;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
             box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.4);
-            cursor:pointer;
-            &:active{
-                background:$footerTextColor;
+            cursor: pointer;
+
+            &:active {
+                background: $footerTextColor;
                 box-shadow: none;
             }
         }
     }
-    .form__confirmation{
-        color:red;
-        text-align:center;
-        visibility:hidden;
-        font-family:'Raleway',sans-serif;
+
+    .form__confirmation {
+        color: red;
+        text-align: center;
+        visibility: hidden;
+        font-family: 'Raleway', sans-serif;
 
     }
-    .confirmation__visible{
-        visibility:visible;
+
+    .confirmation__visible {
+        visibility: visible;
     }
 }
 
-@media screen and (max-width:1199px){
-    .form{
-        .form__wrapper{
-            width:90%;
-            .form__title{
-                margin-top:2rem;
-                font-size:1.5rem;
-                line-height:1.23rem;
+@media screen and (max-width:1199px) {
+    .form {
+        .form__wrapper {
+            width: 90%;
+
+            .form__title {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+                line-height: 1.23rem;
             }
         }
     }
 }
 
-@media screen and (max-width:992px){
-    .form{
-        .form__wrapper{
-            .form__title{
-            }
-            .form__element{
-                .form__flex{
-                    .form__item{
-                        font-size:.88rem;
-                        &::placeholder{
-                            font-size:.88rem;
+@media screen and (max-width:992px) {
+    .form {
+        .form__wrapper {
+            .form__title {}
+
+            .form__element {
+                .form__flex {
+                    .form__item {
+                        font-size: .88rem;
+
+                        &::placeholder {
+                            font-size: .88rem;
                         }
                     }
                 }
-                .form__textarea{
-                    font-size:.88rem;
-                    &::placeholder{
-                        font-size:.88rem;
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:768px){
-    .form{
-        .form__wrapper{
-            .form__title{
-            }
-            .form__element{
-                .form__flex{
-                    .form__item{
-                        font-size:.77rem;
-                        &::placeholder{
-                            font-size:.77rem;
-                        }
-                    }
-                }
-                .form__textarea{
-                    font-size:.77rem;
-                    &::placeholder{
-                        font-size:.77rem;
+
+                .form__textarea {
+                    font-size: .88rem;
+
+                    &::placeholder {
+                        font-size: .88rem;
                     }
                 }
             }
@@ -168,24 +163,55 @@
     }
 }
 
-@media screen and (max-width:576px){
-    .form{
-        .form__wrapper{
-            .form__title{
-            }
-            .form__element{
-                .form__flex{
-                    .form__item{
-                        font-size:.66rem;
-                        &::placeholder{
-                            font-size:.66rem;
+@media screen and (max-width:768px) {
+    .form {
+        .form__wrapper {
+            .form__title {}
+
+            .form__element {
+                .form__flex {
+                    .form__item {
+                        font-size: .77rem;
+
+                        &::placeholder {
+                            font-size: .77rem;
                         }
                     }
                 }
-                .form__textarea{
-                    font-size:.66rem;
-                    &::placeholder{
-                        font-size:.66rem;
+
+                .form__textarea {
+                    font-size: .77rem;
+
+                    &::placeholder {
+                        font-size: .77rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .form {
+        .form__wrapper {
+            .form__title {}
+
+            .form__element {
+                .form__flex {
+                    .form__item {
+                        font-size: .66rem;
+
+                        &::placeholder {
+                            font-size: .66rem;
+                        }
+                    }
+                }
+
+                .form__textarea {
+                    font-size: .66rem;
+
+                    &::placeholder {
+                        font-size: .66rem;
                     }
                 }
             }
