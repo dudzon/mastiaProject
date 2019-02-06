@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
@@ -21,11 +21,9 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header/>
+    <Header />
     <Navbar />
-    <main>
-      {children()}
-    </main>
+    <main>{children()}</main>
     <Footer />
     <BottomDiv />
   </div>
@@ -35,7 +33,7 @@ Layout.propTypes = {
   children: PropTypes.func,
 }
 
-library.add( fab,far,fas )
+library.add(fab, far, fas)
 export default Layout
 
 export const query = graphql`
@@ -45,5 +43,5 @@ export const query = graphql`
         title
       }
     }
-   }
+  }
 `
