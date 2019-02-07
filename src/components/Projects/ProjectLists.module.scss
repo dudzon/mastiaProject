@@ -1,0 +1,66 @@
+@import './../../utils/variables';
+@import './../../utils/placeholders';
+
+.projectsList {
+    width: 100%;
+    background: #f8f8f8;
+
+    &__wrapper {
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        // grid-auto-rows: repeat(2, 1fr);
+        grid-gap: 20px 40px;
+        align-content: center;
+        justify-content: center;
+        overflow: hidden;
+        // padding: 75px 0;
+    }
+}
+
+@media screen and (max-width:1299px) {
+    .projectsList {
+        &__wrapper {
+            height: 85vh;
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .projectsList {
+        &__wrapper {
+            height: 80vh;
+        }
+    }
+}
+
+@media screen and (max-width:1099px) {
+    .projectsList {
+        &__wrapper {
+            height: 75vh;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .projectsList {
+        &__wrapper {
+            grid-template-columns: repeat(2, 45%);
+            grid-template-rows: repeat(3, 200px);
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .projectsList {
+        &__wrapper {
+            display: block;
+            width: 73%;
+            height: auto;
+            padding-top: 1.5rem;
+        }
+    }
+}

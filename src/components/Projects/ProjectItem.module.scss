@@ -1,0 +1,26 @@
+@import './../../utils/variables';
+@import './../../utils/placeholders';
+
+.projectItem {
+    min-width: 200px;
+    max-width: 450px;
+    min-height: 200px;
+
+    &__image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+.not__active {
+    opacity: .4;
+}
+
+@media screen and (max-width:992px) {
+    .projectItem {
+        &__image {
+            height: 100%;
+        }
+    }
+}

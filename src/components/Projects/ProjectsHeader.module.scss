@@ -18,7 +18,7 @@
             font-size: 1.94rem;
             line-height: 1.33rem;
             position: relative;
-            margin: 4.14rem 0 0 0;
+            margin-top: 4.14rem;
 
             &:after {
                 content: '';
@@ -37,6 +37,18 @@
     .projectsHeader {
         &__wrapper {
             width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .projectsHeader {
+        &__wrapper {
+            .projectsHeader__title {
+                font-size: 1.2rem;
+                line-height: 1rem;
+                margin-top: 2rem;
+            }
         }
     }
 }
